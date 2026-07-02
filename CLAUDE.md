@@ -2,9 +2,9 @@
 
 ## What
 Native GUI wrapper for **Scoop** (`scoop`). Part of YAS suite.
-Status: **docs-only — no code yet**.
+Status: **scaffolded & unit-tested** — vendored core + adapter + QML shell compile, 3/3 QtTest suites pass (verified cross-compiling on macOS). Pending: build + QA on the real target platform.
 
-## Stack (planned)
+## Stack
 - C++20 + Qt 6.7+ (Qt Quick / QML), CMake ≥ 3.24, MSVC toolchain
 - Native windowing via Qt QPA plugin: **windows** (Win32).
 - CLI execution: `QProcess`. **scoop is a PowerShell script, not an exe** — invoke via `powershell.exe -NoProfile -Command scoop ...` or the `scoop.cmd` shim in `%USERPROFILE%\scoop\shims`.
@@ -21,7 +21,7 @@ Windows 10/11. x64 + arm64.
 - Detect scoop root: `%USERPROFILE%\scoop` or `SCOOP` env var.
 
 ## Design (see DESIGN.md)
-- Dark theme. Base `#1E1E2E`, accent **Teal `#008080`**, highlight `#0080801A`, text `#F8F8F2` / `#A9B1D6`.
+- Dark theme. Base `#212826`, accent **Teal `#008080`**, highlight `#0080801A`, text `#F8F8F2` / `#ACADAD`.
 - App tag: **SCOOP**. Fonts: Outfit/Inter (UI), Fira Code or JetBrains Mono (CLI output).
 
 ## Conventions

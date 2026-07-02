@@ -4,9 +4,6 @@ Thank you for your interest in contributing to this project! We welcome contribu
 
 ## Development Setup
 
-> **Status**: the code scaffold is rolling out across the suite (yas-brew first).
-> The commands below are the standard YAS build flow and will work as soon as
-> the scaffold lands in this repository.
 
 ### Prerequisites
 
@@ -21,10 +18,11 @@ The `scoop` CLI itself must also be installed — the app is a GUI wrapper aroun
 C++/Qt has no virtualenv; isolation comes from **out-of-source builds**: everything generated lives under `build/` (git-ignored) and the "environment" is pinned by `CMakePresets.json`. To reset the environment completely, delete `build/` and configure again.
 
 ```bash
-cmake --preset default          # 1. configure — creates build/default
-cmake --build --preset default  # 2. compile
-ctest --preset default          # 3. run tests
-.\build\default\yas-scoop.exe
+make build     # configure (if needed) + compile
+make test      # build + run the QtTest suite
+make run       # build + launch the app
+make release   # optimized build
+make help      # list all targets
 ```
 
 ### Project structure
