@@ -5,6 +5,7 @@
 
 #include "appcontroller.h"
 #include "bootstrap.h"
+#include "thememanager.h"
 #include "scoopadapter.h"
 
 int main(int argc, char *argv[])
@@ -19,9 +20,11 @@ int main(int argc, char *argv[])
 
     ScoopAdapter adapter;
     yas::AppController controller(&adapter);
+    yas::ThemeManager themeManager;
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty(QStringLiteral("App"), &controller);
+    engine.rootContext()->setContextProperty(QStringLiteral("YasManager"), &themeManager);
     engine.loadFromModule("YasScoop", "Main");
     return engine.rootObjects().isEmpty() ? 1 : app.exec();
 }
