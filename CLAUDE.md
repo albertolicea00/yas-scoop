@@ -21,6 +21,7 @@ Windows 10/11. x64 + arm64.
 - Detect scoop root: `%USERPROFILE%\scoop` or `SCOOP` env var.
 
 ## Design (see DESIGN.md)
+- UI shell: **Teams-style** — icon rail | list panel | detail pane (no in-app title header). Light/dark mode persisted via `YasManager` context property (`src/core/thememanager.*`, QSettings), toggle at rail bottom. Both palettes live in `qml/core/Theme.qml` (`Theme.dark`).
 - Dark theme. Base `#222629`, accent **Teal `#008080`**, highlight `#0080801A`, text `#F8F8F2` / `#ACADAD`.
 - App tag: **SCOOP**. Fonts: Outfit/Inter (UI), Fira Code or JetBrains Mono (CLI output).
 
