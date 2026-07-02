@@ -21,7 +21,7 @@ Windows 10/11. x64 + arm64.
 - Detect scoop root: `%USERPROFILE%\scoop` or `SCOOP` env var.
 
 ## Design (see DESIGN.md)
-- Dark theme. Base `#212826`, accent **Teal `#008080`**, highlight `#0080801A`, text `#F8F8F2` / `#ACADAD`.
+- Dark theme. Base `#222629`, accent **Teal `#008080`**, highlight `#0080801A`, text `#F8F8F2` / `#ACADAD`.
 - App tag: **SCOOP**. Fonts: Outfit/Inter (UI), Fira Code or JetBrains Mono (CLI output).
 
 ## Conventions
